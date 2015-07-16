@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artifacts>
+   <artifact name="ut-policy"
+             groupId="com.example.ESB-Proxy-Registry.resource"
+             version="1.0.0"
+             type="registry/resource"
+             serverRole="EnterpriseServiceBus">
+      <item>
+         <file>ut-policy.xml</file>
+         <path>/_system/config/myresources</path>
+         <mediaType/>
+      </item>
+   </artifact>
+   <artifact name="policy2"
+             groupId="com.example.ESB-Proxy-Registry.resource"
+             version="1.0.0"
+             type="registry/resource"
+             serverRole="EnterpriseServiceBus">
+      <item>
+         <file>policy2.xml</file>
+         <path>/_system/config/myresources</path>
+         <mediaType/>
+      </item>
+   </artifact>
+</artifacts>

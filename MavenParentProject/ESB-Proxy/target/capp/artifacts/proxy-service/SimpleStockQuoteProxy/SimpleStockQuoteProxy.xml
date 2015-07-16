@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="SimpleStockQuoteProxy" startOnLoad="true" trace="disable"
+  transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+  <target>
+    <endpoint name="endpoint_urn_uuid_26194771-452a-462d-a82a-5c634f694e78">
+      <address uri="${end.point.url}"/>
+    </endpoint>
+    <inSequence/>
+    <outSequence>
+      <send/>
+    </outSequence>
+    <faultSequence/>
+  </target>
+  <policy key="conf:myresources/${security.policy}"/>
+  <enableSec/>
+</proxy>

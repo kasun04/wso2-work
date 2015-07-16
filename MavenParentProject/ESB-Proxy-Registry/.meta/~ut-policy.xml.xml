@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="ut-policy.xml"
+          isCollection="false"
+          path="/_system/config/myresources/ESB-Proxy-Registry/ut-policy.xml"
+          registryUrl="https://localhost:9443/registry"
+          status="added">
+   <mediaType>application/wspolicy+xml</mediaType>
+</resource>

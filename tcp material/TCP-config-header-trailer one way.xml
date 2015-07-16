@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse"
+                 name="EndPoint"
+                 sequence="main"
+                 onError="fault"
+                 protocol="tcp"
+                 suspend="false">
+   <parameters>
+      <parameter name="inbound.tcp.Port">9595</parameter>
+      <parameter name="inbound.tcp.CharSet">UTF-8</parameter>
+      <parameter name="inbound.tcp.ContentType">application/xml</parameter>
+      <parameter name="inbound.tcp.TimeOut">10000</parameter>
+      <parameter name="inbound.tcp.Header">0B</parameter>
+      <parameter name="inbound.tcp.Trailer.byte1">1C</parameter>
+      <parameter name="inbound.tcp.Trailer.byte2">0D</parameter>
+      <parameter name="inbound.tcp.msg.Length"></parameter>
+      <parameter name="inbound.tcp.enclosure.tag"></parameter>
+      <parameter name="inbound.tcp.sendOnly">true</parameter>
+   </parameters>
+</inboundEndpoint>

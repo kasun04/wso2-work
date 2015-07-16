@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/Users/madhuranga/eclipse projects/MavenParentProject/ESB-Proxy-Car/target/filter" filtering="true" overwrite="true" encoding="UTF-8">
+    <zipfileset src="/Users/madhuranga/eclipse projects/MavenParentProject/ESB-Proxy-Car/target/ESB-Proxy-Car_1.0.0.car"/>
+    <filterset filtersfile="/Users/madhuranga/wso2/property/esb-proxy-test.properties" begintoken="${" endtoken="}"/>
+  </copy>
+  <delete verbose="true" quiet="true">
+    <fileset dir="/Users/madhuranga/eclipse projects/MavenParentProject/ESB-Proxy-Car/target" includes="ESB-Proxy-Car_1.0.0.car"/>
+  </delete>
+  <zip basedir="/Users/madhuranga/eclipse projects/MavenParentProject/ESB-Proxy-Car/target/filter" destfile="/Users/madhuranga/eclipse projects/MavenParentProject/ESB-Proxy-Car/target/ESB-Proxy-Car_1.0.0.car"/>
+  <delete verbose="true" quiet="true">
+    <fileset dir="/Users/madhuranga/PatchTesting/wso2esb-4.8.1/repository/deployment/server/carbonapps" includes="ESB-Proxy-Car*.car"/>
+  </delete>
+  <copy todir="/Users/madhuranga/PatchTesting/wso2esb-4.8.1/repository/deployment/server/carbonapps" verbose="true" file="/Users/madhuranga/eclipse projects/MavenParentProject/ESB-Proxy-Car/target/ESB-Proxy-Car_1.0.0.car" overwrite="true"/>
+</target>
+</project>

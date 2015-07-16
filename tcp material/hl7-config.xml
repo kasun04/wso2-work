@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse"
+                 name="Test"
+                 sequence="main"
+                 onError="fault"
+                 protocol="hl7"
+                 suspend="false">
+   <parameters>
+      <parameter name="inbound.hl7.ValidateMessage">true</parameter>
+      <parameter name="inbound.hl7.Port">9090</parameter>
+      <parameter name="inbound.hl7.PassThroughInvalidMessages">false</parameter>
+      <parameter name="inbound.hl7.TimeOut">10000</parameter>
+      <parameter name="inbound.hl7.CharSet">UTF-8</parameter>
+      <parameter name="inbound.hl7.AutoAck">true</parameter>
+      <parameter name="inbound.hl7.BuildInvalidMessages">false</parameter>
+   </parameters>
+</inboundEndpoint>
