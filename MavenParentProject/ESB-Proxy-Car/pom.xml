@@ -158,9 +158,24 @@
         </plugins>
       </build>
       <properties>
+        <maven.car.deploy.server.url>https://localhost:9443</maven.car.deploy.server.url>
         <maven.car.filter.directory>${project.build.directory}/filter</maven.car.filter.directory>
         <maven.car.deploy.directory>${maven.car.deploy.server.home}/repository/deployment/server/carbonapps</maven.car.deploy.directory>
         <maven.car.build.finalName>${project.artifactId}_${project.version}.car</maven.car.build.finalName>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <maven.car.deploy.server.home>/Users/madhuranga/PatchTesting/wso2esb-4.8.1</maven.car.deploy.server.home>
+        <maven.car.filter.properties>/Users/madhuranga/wso2/property/esb-proxy-dev.properties</maven.car.filter.properties>
+      </properties>
+    </profile>
+    <profile>
+      <id>test</id>
+      <properties>
+        <maven.car.deploy.server.home>/Users/madhuranga/PatchTesting/wso2esb-4.8.1</maven.car.deploy.server.home>
+        <maven.car.filter.properties>/Users/madhuranga/wso2/property/esb-proxy-test.properties</maven.car.filter.properties>
       </properties>
     </profile>
   </profiles>
